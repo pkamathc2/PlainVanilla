@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E152" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOSTestApp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W74-yz-Blp">
+                                <rect key="frame" x="142.5" y="255" width="91" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="W74-yz-Blp" secondAttribute="height" multiplier="13:3" id="8k5-Mi-FN3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Pet-Bp-4ES">
+                                <rect key="frame" x="90" y="284" width="235" height="31"/>
+                                <connections>
+                                    <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="GSb-oW-d6g"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="W74-yz-Blp" firstAttribute="centerX" secondItem="Pet-Bp-4ES" secondAttribute="centerX" id="6Bx-JR-Myd"/>
+                            <constraint firstItem="Pet-Bp-4ES" firstAttribute="top" secondItem="W74-yz-Blp" secondAttribute="bottom" constant="8" id="6cD-Q7-jn4"/>
+                            <constraint firstItem="W74-yz-Blp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="235" id="OSh-kS-6bM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Pet-Bp-4ES" secondAttribute="trailing" constant="71" id="hSa-I4-61h"/>
+                            <constraint firstItem="Pet-Bp-4ES" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="72" id="kW0-du-Spa"/>
+                            <constraint firstItem="Pet-Bp-4ES" firstAttribute="top" secondItem="W74-yz-Blp" secondAttribute="bottom" constant="8" id="qZk-TX-xN8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mainSliderBar" destination="Pet-Bp-4ES" id="mUN-8f-kAq"/>
+                        <outlet property="mainTextLabel" destination="W74-yz-Blp" id="VJU-ur-Dt8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="460" y="364"/>
+        </scene>
+    </scenes>
+</document>
